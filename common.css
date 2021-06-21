@@ -1,0 +1,42 @@
+/* Reset CSS  */
+* { margin:0; padding:0; border:0; outline:0; vertical-align:top;
+-webkit-text-size-adjust:none;  }
+body {font-family:'돋움', Dotum; font-size:14px; color:#333;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+ul, ol, dl { list-style:none; }
+img, video { border:0; vertical-align:top; }
+a, a:link {color:#333;text-decoration:none; }
+a:visited { color:#333; }
+a:hover, a:active {color:#333;text-decoration:none; }
+table { border-collapse:collapse; border-spacing:0; }
+input, select { vertical-align:middle; }
+label { cursor:pointer; }
+.blind,legend,hr,caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+i,em,address { font-style:normal; font-weight:normal; }
+p,li,dd{ line-height:1.5em}
+
+.hidden{position: absolute; left: -1000px; top:0; display: block; width: 1px; height: 1px; overflow: hidden; color: #fff}
+
+
+#wrap{}
+
+#header{}
+#header .header_inner{}
+#header .header_inner>.header_top{}
+#header .header_inner>.header_top .select{}
+#header .header_inner>.header_top .select .lang_icon{}
+#header .header_inner>.header_top .select .lang_icon>a{}
+
+#header .header_inner>.header_top .select .lang_list{}
+#header .header_inner>.header_top .select .lang_list>li{}
+#header .header_inner>.header_top .select .lang_list>li>a{}
+
+#header .header_inner>.header_top .header_log{}
+#header .header_inner>.header_top .header_log>span{}
+#header .header_inner>.header_top .header_log>span>a{}
+
+#header .header_inner>.header_bottom{}
+
+
+#container{}
+#footer{}
