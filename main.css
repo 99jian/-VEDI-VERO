@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* layout */
+#container{display: flex; width: 100%;}
+article.main_visual{width: 100%;}
+
+
+/* article.main_visual */
+article.main_visual .main_video{float: left; width: 50%;}
+article.main_visual .main_video video{width: 100%;}
+
+article.main_visual .main_slide{float: right;width: 50%;}
+/* article.main_visual .main_slide ul{}
+article.main_visual .main_slide ul li{}
+article.main_visual .main_slide ul li img{} */
+
+/* --------------------------------------@media screen------------------------------------------- */
+/* 일반PC(1281px ~ 1600px) */
+@media screen and (max-width : 1600px){
+
+
+}
+/* 대형 태블릿(769px ~ 1280px) */
+@media screen and (max-width : 1280px){
+    article.main_visual .main_video{float: none; width: 100%;}
+    article.main_visual .main_slide{display: none;float: none;width: 100%;}
+
+}
+/* 중형 태블릿(415px ~ 768px) */
+@media screen and (max-width : 768px){
+    article.main_visual .main_video{display: none;}
+    article.main_visual .main_slide{display: block;}
+}
+/* 스마트폰 (320px ~ 414px) */
+@media screen and (min-width : 320px) and (max-width : 414px){
+
+}

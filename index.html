@@ -1,54 +1,118 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <title>VEDI VERO KOR</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- smart phone / mobile 홈화면 추가 or 모바일페이지 실행시 전체화면으로 실행 -->
+    <!-- 스마트 폰 / 모바일 = 홈 화면 추가 또는 모바일페이지 실행시 전체화면으로 실행 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="common/common.css">
-    <!-- favicon -->
+
+    <!-- common css(헤더 + 푸터 + 리셋) -->
+    <link rel="stylesheet" href="common/css/common.css">
+    <!-- main css (컨텐츠) -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- 파비콘 -->
     <link rel="shortcut icon" href="favicon.ico">
-    <!-- mobile app icon -->
+    <!-- 모바일_앱 아이콘 -->
     <link rel="apple-touch-icon-precomposed" href="app_icon.png" sizes="114x114">
+    <!-- 폰트어썸 CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- rs_slide(js*2개+ css*1개 + name) -->
+    <link rel="stylesheet" href="css/rsslider.css">
+    
     <script src="js/jquery-1.8.3.min.js"></script>
-    <!-- 버전 호환성을 높여줌 -->
     <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- lang js  -->
+    <script src="common/js/lan.js"></script>
+    <!-- gnb js -->
+    <script src="common/js/gnb.js"></script>
+
+    <!-- rs_slide(js*2개+ css*1개 + name) -->
+    <script src="js/responsiveslide_call.js"></script>
+    <script src="js//responsiveslides.min.js"></script>
 </head>
+
 <body>
-    <!-- 접근성을 위한 Skip nav -->
     <div id="skip_nav">
         <a class="hidden" href="#gnb">네비게이션 바로가기</a>
         <a class="hidden" href="#container">컨텐츠 바로가기</a>
-        <a class="hidden" href="#footer">하단영역 바로가기</a>
     </div>
     <div id="wrap">
         <header id="header">
             <div class="header_inner">
                 <div class="header_top">
-                    <div class="select">
-                        <span class="lang"><a href="#"></a></span>
-                        <ul class="lang_list">
-                            <li><a href="#">KO</a></li>
-                            <li><a href="#">EN</a></li>
-                            <li><a href="#">JP</a></li>
-                            <li><a href="#">CH</a></li>
-                        </ul>
-                    </div>
-                    <div class="header_log">
-                        <span><a href="#">LOGIN</a></span>
-                        <span><a href="#">JOIN</a></span>
-                        <span><a href="#">MY PAGE</a></span>
+                    <div class="header_top_inner">
+                        <div class="select">
+                            <span class="lang_icon"><a href="#">LANGUAGE&nbsp;<i class="fas fa-angle-down"></i></a></span>
+                            <ul class="lang_list">
+                                <li><a href="#">KO</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">JP</a></li>
+                                <li><a href="#">CH</a></li>
+                            </ul>
+                        </div>
+                        <div class="header_log">
+                            <span><a href="#">LOGIN</a></span>
+                            <span><a href="#">JOIN</a></span>
+                            <span><a href="#">MY PAGE</a></span>
+                        </div>
                     </div>
                 </div>
-                <div class="header_bottom"></div>
+                <div class="header_bottom">
+                    <div class="header_bottom_inner">
+                        <h1 id="logo"><a href="index.html"><img src="common/imgs/logo_black.png" alt="로고이미지"></a></h1>
+                        <span class="m_nav_icon"><a href="#"><i class="fas fa-align-justify"></i></a></span>
+                        <nav id="gnb">
+                            <ul>
+                                <li><a href="#">BRAND</a></li>
+                                <li><a href="#">SHOWROOM</a></li>
+                                <li><a href="#">CONTENTS</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </header>
-        <section id="container"></section>
-        <footer id="footer"></footer>
+        <section id="container">
+            <h2 class="hidden">컨텐츠영역</h2>
+            <article class="main_visual">
+                <h3 class="hidden">메인비쥬얼영역</h3>
+                <div class="main_video">
+                    <video src="images/vedi_movie.mp4" autoplay loop muted></video>
+                </div>
+                <div class="main_slide callbacks_container">
+                    <ul id="slider4" class="rslides">
+                        <li><img src="images/visual1.jpg" alt="화보이미지1"></li>
+                        <li><img src="images/visual2.jpg" alt="화보이미지2"></li>
+                        <li><img src="images/visual3.jpg" alt="화보이미지3"></li>
+                        <li><img src="images/visual4.jpg" alt="화보이미지4"></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <footer id="footer">
+            <div class="footer_inner">
+                <span class="footer_logo"> 
+                    <a href="index.html"><img src="common/imgs/logo_gray.png" alt="푸터로고이미지"></a>
+                </span>
+                <!-- address태그는 html5 추가 태그로 body 요소의 문서에 대한 권한을 가진 소유자의 연락처 정보를 표시 
+                    (렌더링은 italic으로 표시, mail주소는 별도로 P태그나 다른 태그 사용)  -->
+                <address>
+                     <p><span>A/S CUSTOMER CENTER</span>02-466-4557~8</p>
+                     <p>Copyright&copy;2021 vedi vero ㅣ All Rights Reserved ㅣ Powered by nextwave</p>
+                </address>
+                <div class="sns_box">
+                    <span><a href="#"><img src="common/imgs/instagram.png" alt="인스타로그램아이콘이미지"></a></span>
+                    <span><a href="#"><img src="common/imgs/facebook.png" alt="페이스북아이콘이미지"></a></span>
+                </div>
+            </div>
+        </footer>
         <!-- <div id="pop"></div>
         <div id="top"></div> -->
     </div>
+
 </body>
+
 </html>
